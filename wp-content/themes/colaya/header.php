@@ -37,7 +37,14 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="/computalaya"><?php echo get_bloginfo( 'name' ); ?></a>
+    <?php 
+    	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	if ( has_custom_logo() ) {
+	        echo '<a class="navbar-brand js-scroll-trigger" href="/computalaya"><img src="'. esc_url( $logo[0] ) .'"></a>';
+	} 
+    ?>
+      
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>

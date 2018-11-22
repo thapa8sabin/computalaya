@@ -1,54 +1,43 @@
   <!-- Services -->
   <?php is_home(); ?>
+  <?php 
+  $services = get_posts(['post_type' => 'services']);
+  //print_r(get_post_type_object( 'services' ));die;
+  $i = 1;
+  if(count($services) > 0): ?>
   <section id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase"><?php _e(get_post_type_object( 'services' )->label);  ?></h2>
+          <h3 class="section-subheading text-muted"><?php _e(get_post_type_object( 'services' )->description);  ?></h3>
         </div>
       </div>
       <div class="row text-center">
+      <?php foreach($services as $service): ?>
         <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Confidentiality</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <?= get_post_meta($service->ID,'image_link',true); ?>
+          <h4 class="service-heading"><?php _e($service->post_title); ?></h4>
+          <?php echo _e($service->post_content); ?>
         </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Integrity</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Accountabilty</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
-
-  <?php 
-  $how_we_engage = get_posts(['post_type' => 'engages']);
+  <?php
+  endif; 
+  
+  $how_we_engage = get_posts(['post_type' => 'timeline']);
   $i = 1;
-  if(count($how_we_engage) > 0):?>
+  if(count($how_we_engage) > 0): ?>
     <!-- About -->
     <section id="about">
       <div class="container">
 
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase"><?php _e(get_post_type_object( 'engages' )->description);  ?> </h2>
-            <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+            <h2 class="section-heading text-uppercase"><?php _e(get_post_type_object( 'timeline' )->description);  ?> </h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
           </div>
         </div>
         <div class="row">
@@ -60,11 +49,11 @@
                 ?>
                 <li <?= $css ?> >
                   <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="<?php echo get_bloginfo('template_directory'); ?>/img/about/1.jpg" alt="">
+                    <img class="rounded-circle img-fluid" src="<?php echo get_bloginfo('template_directory').get_post_meta($engage->ID,'image_link',true); ?>" alt="">
                   </div>
                   <div class="timeline-panel">
                     <div class="timeline-heading">
-                      <h4><?= get_post_meta($engage->ID,'phase',true); ?></h4>
+                      <h4><?= get_post_meta($engage->ID,'year',true); ?></h4>
                       <h4 class="subheading"><?= $engage->post_title; ?></h4>
                     </div>
                     <div class="timeline-body">
@@ -88,7 +77,7 @@
     <?php endif; ?>
 
  <?php 
-  $prolayans = get_posts(['post_type' => 'prolayans','orderby'=>"post_title",'order'=>'ASC','numberposts'=>3]);
+  $prolayans = get_posts(['post_type' => 'teams','orderby'=>"post_title",'order'=>'ASC','numberposts'=>3]);
   $i = 1;
   if(count($prolayans) > 0):?>
     <!-- Team -->
@@ -96,19 +85,20 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase"><?php _e(get_post_type_object( 'prolayans' )->description);  ?> </h2>
-            <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
+            <h2 class="section-heading text-uppercase"><?php _e(get_post_type_object( 'teams' )->description);  ?> </h2>
+            <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
         <div class="row">
           <?php foreach($prolayans as $prolayan): ?>
           <div class="col-sm-4">
             <div class="team-member">
-              <?= $prolayan->post_content; ?>
+              <img src="<?= get_post_meta($prolayan->ID, 'image_link',true) ?>" width="225" height="225" class="alignnone size-medium" />
               <h4><?= $prolayan->post_title; ?></h4>
               <p class="text-muted"><?= $prolayan->post_excerpt; ?></p>
+              
               <ul class="list-inline social-buttons">
-                <?= get_post_meta($prolayan->ID,'prolayan_team_social_link',true); ?>
+                <?= get_post_meta($prolayan->ID,'team_social_link',true); ?>
               </ul>
             </div>
           </div>
