@@ -1,82 +1,95 @@
-<?php
-/**
- * The template for displaying comments
- *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<div class="post-comments padd-x-25">
 
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
-	return;
-}
-?>
+	<h3>#3 Comments</h3>
 
-<div id="comments" class="comments-area">
+	<ul class="list-comments marg-y-50">
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-			$comments_number = get_comments_number();
-			if ( '1' === $comments_number ) {
-				/* translators: %s: post title */
-				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'twentyseventeen' ), get_the_title() );
-			} else {
-				printf(
-					/* translators: 1: number of comments, 2: post title */
-					_nx(
-						'%1$s Reply to &ldquo;%2$s&rdquo;',
-						'%1$s Replies to &ldquo;%2$s&rdquo;',
-						$comments_number,
-						'comments title',
-						'twentyseventeen'
-					),
-					number_format_i18n( $comments_number ),
-					get_the_title()
-				);
-			}
-			?>
-		</h2>
+		<li class="post-comment marg-bott-50">
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'avatar_size' => 100,
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'reply_text'  => twentyseventeen_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'twentyseventeen' ),
-				) );
-			?>
-		</ol>
+			<div class="wrap-comment marg-bott-25">
 
-		<?php the_comments_pagination( array(
-			'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'twentyseventeen' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-		) );
+				<div class="user-detail">
+					<div class="user-thumb brd-fs-clr marg-right-25"><img src="img/avatar.jpg"></div>
+					<div class="user-wrap">
+						<h5 class="user-name">unCommons</h5>
+						<div class="user-data">24 March 2013</div>
+					</div>
+					<div class="clear"></div>
+				</div>
 
-	endif; // Check for have_comments().
+				<div class="user-comment brd-fs-clr padd-left-25 padd-top-25 marg-bott-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+				<div class="reply-comment wh-clr bg-gr2-clr bg-nd-clr-hov">Reply</div>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyseventeen' ); ?></p>
-	<?php
-	endif;
+			</div>
 
-	comment_form();
-	?>
+			<ul class="reply-comments marg-left-50">
 
-</div><!-- #comments -->
+				<div class="wrap-comment">
+
+					<div class="user-detail">
+						<div class="user-thumb brd-fs-clr marg-right-25"><img src="img/avatar.jpg"></div>
+						<div class="user-wrap">
+							<h5 class="user-name">unCommons</h5>
+							<div class="user-data">25 March 2013</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="user-comment brd-fs-clr padd-left-25 padd-top-25 marg-bott-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+
+					<div class="reply-comment wh-clr bg-gr2-clr bg-nd-clr-hov">Reply</div>
+
+				</div>
+
+			</ul>
+
+		</li>
+
+		<li class="post-comment marg-bott-50">
+
+			<div class="wrap-comment marg-bott-25">
+
+				<div class="user-detail">
+					<div class="user-thumb brd-fs-clr marg-right-25"><img src="img/avatar.jpg"></div>
+					<div class="user-wrap">
+						<h5 class="user-name">unCommons</h5>
+						<div class="user-data">28 September 2013</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="user-comment brd-fs-clr padd-left-25 padd-top-25 marg-bott-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+				<div class="reply-comment wh-clr bg-gr2-clr bg-nd-clr-hov">Reply</div>
+
+			</div>
+
+		</li>
+
+		<div class="clear"></div>
+
+	</ul>
+
+</div>
+
+<div class="form-comment padd-x-25">
+
+					<h3>Leave a Reply</h3>
+
+					<div class="form-wrap marg-top-25">
+
+						<form action="#" method="post">
+
+							<input class="brd-fs-clr" type="text" name="name" placeholder="your name" required>
+							<input class="brd-fs-clr" type="email" name="email" placeholder="your email" required>
+							<input class="brd-fs-clr" type="email" name="email" placeholder="your website" required>
+							<textarea class="brd-fs-clr" name="message" placeholder="your comment" required></textarea>
+
+							<input class="bg-fs-clr bg-nd-clr-hov" type="submit" name="submit" value="post comment">
+
+						</form>
+
+					</div>
+
+				</div> 

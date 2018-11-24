@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- META -->
+<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<title>Maya - Smart & Powerful HTML Theme</title>
+
+<!-- CSS LIBS -->
+
+<link href='css/style.css' rel='stylesheet' type="text/css">
+<link href='css/plugins.css' rel='stylesheet' type="text/css">
+
+<!-- GOOGLE FONTS -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,300italic,100italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="img/favicon.png" />
+
+<style type="text/css">
+	
+	/* THEME COLORS */
+	
+	.wh-clr { color: #fff; }
+	.wh-clr-hov:hover { color: #fff; }
+	.brd-wh-clr { border-color: #fff; }
+	.brd-wh-clr-hov:hover { border-color: #fff; }
+	.bg-wh-clr { background-color: #fff; }
+	.bg-wh-clr-hov:hover { background-color: #fff; }
+	.bg-wh-alpha { background-color: rgba(255,255,255,0.9); }
+	
+	.bg-bk-alpha { background-color: rgba(0,0,0,0.7); }
+	
+	.gr1-clr { color: #fafafa; }
+	.gr1-clr-hov:hover { color: #fafafa; }
+	.brd-gr1-clr { border-color: #fafafa; }
+	.brd-gr1-clr-hov:hover { border-color: #fafafa; }
+	.bg-gr1-clr { background-color: #fafafa; }
+	.bg-gr1-clr-hov:hover { background-color: #fafafa; }
+	
+	.gr2-clr { color: #dfdfdf; }
+	.gr2-clr-hov:hover { color: #dfdfdf; }
+	.brd-gr2-clr { border-color: #dfdfdf; }
+	.brd-gr2-clr-hov:hover { border-color: #dfdfdf; }
+	.bg-gr2-clr { background-color: #dfdfdf; }
+	.bg-gr2-clr-hov:hover { background-color: #dfdfdf; }
+	
+	.gr3-clr { color: #333; }
+	.gr3-clr-hov:hover { color: #333; }
+	.brd-gr3-clr { border-color: #333; }
+	.brd-gr3-clr-hov:hover { border-color: #333; }
+	.bg-gr3-clr { background-color: #333; }
+	.bg-gr3-clr-hov:hover { background-color: #333; }
+	
+	/* CUSTOM COLORS */
+	
+	.fs-clr { color: #2574a9; } 
+	.fs-clr-hov:hover { color: #2574a9; } 
+	.bg-fs-clr { background-color: #2574a9; }
+	.bg-fs-clr-hov:hover { background-color: #2574a9; } 
+	.bg-fs-alpha { background-color: rgba(37,116,169,0.7); }
+	.brd-fs-clr { border-color: #2574a9; }
+	.brd-fs-clr-hov:hover { border-color: #2574a9; }
+		
+	.nd-clr { color: #333333; } 
+	.nd-clr-hov:hover { color: #333333; } 
+	.bg-nd-clr { background-color: #333333; }
+	.bg-nd-clr-hov:hover { background-color: #333333; }
+	.bg-nd-alpha { background-color: rgba(51,51,51,0.7); }
+	.brd-nd-clr { border-color: #333333; }
+	.brd-nd-clr-hov:hover { border-color: #2574a9; }
+		
+	/* Preloader */
+	
+	#jpreBar {
+		background: #2574a9;
+	}
+	
+	#jprePercentage {
+		border-color: #2574a9;
+		color: #2574a9;
+	}
+	
+	/* Standard Menu/Submenu */
+		
+	.main-menu li:hover a  {
+		color: #333333;
+	}
+	
+	.header-dark .sub-menu li a {
+		background-color: #333333 !important;
+	}
+	
+	.header-dark .sub-menu li a:hover {
+		background-color: #fff !important;
+		color: #333333	}
+	
+	.sub-menu li:hover a {
+		color: #333333 !important;
+	}
+	
+	/* Sticky Menu/Submenu */
+	
+	.sticky .main-menu li, .sticky .main-menu li a {
+		color: #333333;
+	}
+	
+	.sticky .main-menu li:hover a {
+		background-color: #333333;
+	}
+	
+	.sticky .sub-menu li a {
+		background-color: #2574a9 !important;
+	}
+	
+	.sticky .sub-menu li:hover a {
+		background-color: #333333 !important;
+	}
+	
+	/* Sticky Quick Icons */
+	
+	.sticky #quick-icons li {
+		color: #333333;
+	}
+	
+	.sticky #quick-icons li:hover {
+		border-color: #333333;
+	}
+	
+	/* Sticky Nav Icons */
+	
+	.sticky-icons li{
+		color: #333333 !important;
+	}
+		
+	/* Filters */
+ 	
+	.port-filter li.selected {
+		background-color: #2574a9;
+	}
+	
+	/* Slills */
+	
+	.team-skills li .bar-val {
+   		background: #2574a9;
+	}
+	
+	/* Mobile Menu */
+	
+	#mobile-menu {
+		background-color: #333333;
+	}
+	
+	#mobile-menu li:hover {
+		background: #2574a9;
+	}
+	
+	/* Video */
+	
+	#volume { position: absolute; left: 0; bottom: 0; background: #333333; z-index:9999; color: #fff; padding: 10px; display: block; opacity: 0.2; font-size: 16px; cursor: pointer; }
+	
+	#volume:hover { opacity: 1; }
+	
+	#internal-video:after { content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: rgba(37,116,169,0.7); }
+	
+	/* Typography */
+	
+	blockquote { 
+		border-color: #2574a9;
+		color: #2574a9; 
+	}
+	
+	h1, h2, h3 { color: #2574a9; }
+	
+	.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+		background: #2574a9;
+		color: #fff;
+	}
+
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51716381-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body><header class="transit header-dark">
+
+    <div id="logo-white" class="logo"><a href="index.php.html"><img src="img/logo-dark.png" /></a></div>
+    <div id="logo-dark" class="logo"><a href="index.php.html"><img src="img/logo-dark.png" /></a></div>
+    <div id="logo-short" class="logo"><a href="index.php.html"><img class="brd-nd-clr" src="img/logo-mobile.png" /></a></div>
+
+    <div class="main-menu">
+            
+        <ul>
+            <li class="menu-item-parent"><a href="index.php.html">home</a>
+            	<ul class="sub-menu transit">
+                	<li><a href="index-video.php.html">home video</a></li>
+                    <li><a href="index-parallax.php.html">home parallax</a></li>
+                    <li><a href="index-no-intro.php.html">home no intro</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-parent"><a href="page-full.php.html">pages</a>
+            	<ul class="sub-menu transit">
+					<li><a href="about-page.php.html">about</a></li>
+            		<li><a href="services-page.php.html">services</a></li>
+            		<li><a href="contact-page.php.html">contacts</a></li>
+                	<li><a href="page-side-left.php.html">sidebar left</a></li>
+                	<li><a href="page-side-right.php.html">sidebar right</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-parent"><a href="features-page.php.html">features</a>
+            	<ul class="sub-menu transit">
+                	<li><a href="grid-page.php.html">columns</a></li>
+            		<li><a href="elements-page.php.html">elements</a></li>
+            		<li><a href="typography-page.php.html">typography</a></li>
+            		<li><a href="transitions-page.php.html">transitions</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-parent"><a href="portfolio-page-1.php.html">portfolio</a>
+            	<ul class="sub-menu transit">
+                	<li><a href="portfolio-page-2.php.html">portfolio type 2</a></li>
+                	<li><a href="portfolio-page-3.php.html">portfolio type 3</a></li>
+                	<li><a href="portfolio-page-4.php.html">portfolio type 4</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-parent"><a href="item-full.php.html">projects</a>
+            	<ul class="sub-menu transit">
+                	<li><a href="item-slider.php.html">with slider</a></li>
+                    <li><a href="item-gallery.php.html">with gallery</a></li>
+                    <li><a href="item-side-left.php.html">sidebar left</a></li>
+                	<li><a href="item-side-right.php.html">sidebar right</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-parent"><a href="blog-page-1.php.html">blog</a>
+            	<ul class="sub-menu transit">
+                	<li><a href="blog-page-2.php.html">blog type 2</a></li>
+                	<li><a href="blog-page-3.php.html">blog type 3</a></li>
+                	<li><a href="blog-page-4.php.html">blog type 4</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-parent"><a href="post-full.php.html">posts</a>
+            	<ul class="sub-menu transit">
+                	<li><a href="post-gallery.php.html">post gallery</a></li>
+                	<li><a href="post-slider.php.html">post slider</a></li>
+                	<li><a href="post-video.php.html">post video</a></li>
+                	<li><a href="post-audio.php.html">post audio</a></li>
+                	<li><a href="post-side-left.php.html">sidebar left</a></li>
+                	<li><a href="post-side-right.php.html">sidebar right</a></li>
+                	<li><a href="post-full-related.php.html">related posts</a></li>
+                </ul>
+            </li>
+            <li><a data-curtain="false" href="http://themeforest.net/item/maya-smart-powerful-html-theme/8896986?ref=unCommons">buy it</a></li>
+        </ul>
+        
+    </div>
+    
+    <div id="quick-icons">
+    	
+        <ul class="info-menu">
+            <li><a title="support" href="mailto:team@uncommons.pro"><i class="icon-mail"></i></a></li>
+            <li><a title="follow us" href="http://themeforest.net/user/unCommons/follow?_ga=1.136392564.538248324.1395425054"><i class="icon-heart"></i></a></li>
+        </ul>
+        
+        <ul class="switch-menu">
+            <li class="open-menu"><i class="icon-menu"></i></li>
+        </ul>
+        
+        <div class="clear"></div>
+        
+	</div>
+    
+    <div class="clear"></div>
+    
+</header>
+
+<div id="mobile-menu">
+            
+    <ul>
+        <li class="menu-item-parent"><a href="index.php.html">home</a>
+            <ul class="sub-menu transit">
+                <li><a href="index-video.php.html">home video</a></li>
+                <li><a href="index-parallax.php.html">home parallax</a></li>
+                <li><a href="index-no-intro.php.html">home no intro</a></li>
+            </ul>
+        </li>
+        <li class="menu-item-parent"><a href="page-full.php.html">pages</a>
+            <ul class="sub-menu transit">
+                <li><a href="about-page.php.html">about</a></li>
+                <li><a href="services-page.php.html">services</a></li>
+                <li><a href="contact-page.php.html">contacts</a></li>
+                <li><a href="page-side-left.php.html">sidebar left</a></li>
+                <li><a href="page-side-right.php.html">sidebar right</a></li>
+            </ul>
+        </li>
+        <li class="menu-item-parent"><a href="features-page.php.html">features</a>
+            <ul class="sub-menu transit">
+                <li><a href="grid-page.php.html">columns</a></li>
+                <li><a href="elements-page.php.html">elements</a></li>
+                <li><a href="typography-page.php.html">typography</a></li>
+                <li><a href="transitions-page.php.html">transitions</a></li>
+            </ul>
+        </li>
+        <li class="menu-item-parent"><a href="portfolio-page-1.php.html">portfolio</a>
+            <ul class="sub-menu transit">
+                <li><a href="portfolio-page-2.php.html">portfolio type 2</a></li>
+                <li><a href="portfolio-page-3.php.html">portfolio type 3</a></li>
+                <li><a href="portfolio-page-4.php.html">portfolio type 4</a></li>
+            </ul>
+        </li>
+        <li class="menu-item-parent"><a href="item-full.php.html">projects</a>
+            <ul class="sub-menu transit">
+                <li><a href="item-slider.php.html">with slider</a></li>
+                <li><a href="item-gallery.php.html">with gallery</a></li>
+                <li><a href="item-side-left.php.html">sidebar left</a></li>
+                <li><a href="item-side-right.php.html">sidebar right</a></li>
+            </ul>
+        </li>
+        <li class="menu-item-parent"><a href="blog-page-1.php.html">blog</a>
+            <ul class="sub-menu transit">
+                <li><a href="blog-page-2.php.html">blog type 2</a></li>
+                <li><a href="blog-page-3.php.html">blog type 3</a></li>
+                <li><a href="blog-page-4.php.html">blog type 4</a></li>
+            </ul>
+        </li>
+        <li class="menu-item-parent"><a href="post-full.php.html">posts</a>
+            <ul class="sub-menu transit">
+                <li><a href="post-gallery.php.html">post gallery</a></li>
+                <li><a href="post-slider.php.html">post slider</a></li>
+                <li><a href="post-video.php.html">post video</a></li>
+                <li><a href="post-audio.php.html">post audio</a></li>
+                <li><a href="post-side-left.php.html">sidebar left</a></li>
+                <li><a href="post-side-right.php.html">sidebar right</a></li>
+                <li><a href="post-full-related.php.html">related posts</a></li>
+            </ul>
+        </li>
+    </ul>
+        
+</div>
+	<div id="contacts" class="page">
+        
+        <div class="map-content marg-top-100">
+    
+            <div class="row">
+            
+                <div data-address="New York" data-zoom="13" data-color="#2574a9" data-saturation="-50" class="gmap" id="gmap"></div>
+                
+                <div id="gmap_markers">
+                   
+                   <!-- MARK 1 -->
+                   <span data-mark-address='Jersey City New York'>
+                        <div class="team-box marg-25">
+                        
+                            <div class="team-thumb" style="background-image: url('img/team/team5.jpg');">
+                            
+                                <div class="team-caption transit">
+                                    <div class="team-name marg-top-25 fs-clr">Johnatan Doe</div>
+                                    <div class="line-center brd-gr2-clr"></div>
+                                    <div class="team-skills">
+                                        <ul>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 90%;">Media</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 80%;">Social</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 50%;">SEO</div></div></li>
+                                        </ul>                            
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-detail padd-x-25 fs-clr brd-fs-clr">
+                                <span class="team-role">Marketer / SEO</span>
+                                <span class="team-contact"><i class="icon-mail"></i><i class="icon-clock"></i></span>
+                            </div>
+                            
+                        </div>
+                    </span>
+                    
+                    <!-- MARK 2 -->
+                    <span data-mark-address='East Wiliamsburg New York'>
+                        <div class="team-box marg-25">
+                        
+                            <div class="team-thumb" style="background-image: url('img/team/team6.jpg');">
+                                
+                                <div class="team-caption transit">
+                                    <div class="team-name marg-top-25 fs-clr">Christy Tack</div>
+                                    <div class="line-center brd-gr2-clr"></div>
+                                    <div class="team-skills">
+                                        <ul>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 75%;">Desk</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 91%;">Support</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 67%;">Managment</div></div></li>
+                                        </ul>                            
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="team-detail padd-x-25 fs-clr brd-fs-clr">
+                                <span class="team-role">Receptionist</span>
+                                <span class="team-contact"><i class="icon-mail"></i><i class="icon-clock"></i></span>
+                            </div>
+                            
+                        </div>
+                    </span>
+                    
+                    <!-- MARK 3 -->
+                    <span data-mark-address='Downtown Brooklyn New York'>
+                        <div class="team-box marg-25">
+                        
+                            <div class="team-thumb" style="background-image: url('img/team/team2.jpg');">
+                            
+                                <div class="team-caption transit">
+                                    <div class="team-name marg-top-25 fs-clr">Margaret Butch</div>
+                                    <div class="line-center brd-gr2-clr"></div>
+                                    <div class="team-skills">
+                                        <ul>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 80%;">Photography</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 54%;">Softare</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 49%;">Project</div></div></li>
+                                        </ul>                            
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-detail padd-x-25 fs-clr brd-fs-clr">
+                                <span class="team-role">Graphics</span>
+                                <span class="team-contact"><i class="icon-mail"></i><i class="icon-clock"></i></span>
+                            </div>  
+                            
+                        </div>
+                    </span>
+                    
+                    <!-- MARK 4 -->
+                    <span data-mark-address='Lower Manhattan New York'>
+                        <div class="team-box marg-25">
+                        
+                            <div class="team-thumb" style="background-image: url('img/team/team3.jpg');">
+                            
+                                <div class="team-caption transit">
+                                    <div class="team-name marg-top-25 fs-clr">Denny Stweart</div>
+                                    <div class="line-center brd-gr2-clr"></div>
+                                    <div class="team-skills">
+                                        <ul>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 89%;">PHP</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 65%;">Wordpress</div></div></li>
+                                            <li><div class="bar-bg"><div class="bar-val" style="width: 56%;">jQuery</div></div></li>
+                                        </ul>                            
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="team-detail padd-x-25 fs-clr brd-fs-clr">
+                                <span class="team-role">Web Developer</span>
+                                <span class="team-contact"><i class="icon-mail"></i><i class="icon-clock"></i></span>
+                            </div>   
+                            
+                        </div>
+                    </span>
+                </div>
+                
+            </div>
+        
+    	</div>
+        
+        <div class="header-section padd-y-75 bg-gr1-clr">
+            
+            <div class="title-section padd-x-25 fs-clr">contacts us</div>
+            <div class="subtitle-section padd-x-25">Sed sed nibh nec erat molestie cursus. Praesent pretium sed nisl ut rhoncus.<br />
+			Phasellus venenatis hendrerit vestibulum. Curabitur semper rutrum.</div>
+            
+        </div>
+    
+    	<div class="form-content padd-top-50 padd-bott-25">
+
+        	<div class="boxed">
+        
+                <div class="col-2-3">
+                        
+                    <div class="form-box marg-25 transit-bottom">
+                                                
+                        <form action="#" method="post">
+                        
+                            <input class="brd-fs-clr" type="text" name="name" placeholder="your name" required>
+                            <input class="brd-fs-clr" type="email" name="email" placeholder="your email" required>
+                            <textarea class="brd-fs-clr" name="message" placeholder="your message" required></textarea>
+                            
+                            <input class="bg-fs-clr bg-nd-clr-hov" type="submit" name="submit" value="send">
+                            
+                        </form>
+                                    
+                    </div>
+                
+                </div>
+                
+                <div class="col-1-3">
+                
+                    <div class="contact-content transit-top">
+                        
+                        <div class="contact-message padd-25">
+                            
+                            <div class="contact-icons">
+                                <li class="transit-top bg-fs-clr bg-nd-clr-hov" data-delay="0"><i class="icon-clock"></i></li>
+                                <li class="transit-top bg-fs-clr bg-nd-clr-hov" data-delay="250"><i class="icon-help"></i></li>
+                                <li class="transit-top bg-fs-clr bg-nd-clr-hov" data-delay="500"><i class="icon-mail"></i></li>
+                            </div>
+                            
+                            <div class="contact-exc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+                                Donec lacinia, turpis nec convallis volutpat.
+                            </div>
+                            
+                            <div class="line-left brd-gr2-clr"></div>
+                            
+                            <div class="contact-detail">                   
+                                <li class="nd-clr"><i class="icon-clock"></i>Open | Mon_Fri 9_13 / 15_18</li>
+                                <li class="nd-clr"><i class="icon-globe"></i>(+000) 123 456 789</li>
+                                <li class="nd-clr"><i class="icon-printer"></i>(+111) 123 456 789</li>
+                            </div>
+                            
+                        </div>
+                                                
+                    </div>
+                
+                </div>
+                
+                <div class="clear"></div>
+                                                                        
+            </div>
+        
+    	</div>
+                                
+    </div>
+    
+<footer>
+	
+    <div class="footer-content">
+    
+    	<div class="footer-layer bg-fs-clr">
+        
+        	<div class="boxed">
+    
+                <div class="footer-icons">
+                    <ul>
+                        <li><i class="icon-facebook"></i></li>
+                        <li><i class="icon-twitter"></i></li>
+                        <li><i class="icon-googleplus"></i></li>
+                        <li><i class="icon-flickr"></i></li>
+                        <li><i class="icon-pinterest"></i></li>
+                        <li><i class="icon-linkedin"></i></li>
+                        <li><i class="icon-tumblr"></i></li>
+                        <li><i class="icon-instagram"></i></li>
+                        <li><i class="icon-picasa"></i></li>
+                    </ul>
+                </div>
+        
+                <div id="footer-copy" class="padd-x-25">Copyrights &copy; 2014 | <strong>Maya</strong> Theme by <a href="http://www.uncommons.pro"><strong>unCommons</strong></a></div>
+                
+                <div class="clear"></div>
+            
+            </div>
+        
+        </div>
+        
+    </div>
+    
+</footer>    <div class="btn-up brd-wh-clr bg-wh-clr fs-clr brd-fs-clr-hov">        
+         <i class="icon-arrow-up"></i>
+    </div>
+
+	<div id="curtain"></div>
+
+<!-- JS LIBS -->
+<script type="text/javascript" src="js/jquery-min.js"></script>
+
+<script type="text/javascript" src="js/plugins.js"></script> 
+
+<script type="text/javascript" src="js/scripts.js"></script> 
+
+<!-- Only for Demo Purposes -->
+<script type="text/javascript" src="js/switcher.js"></script>  
+<div class="closed" id="customizer">
+        <span class="button"><i class="icon-cog"></i></span>
+        <div class="switcher-head">Color Switcher</div>	
+        <ul class="colors">
+            <li class="s-blue"><a href="index-color=blue.html" data-curtain="false"></a></li>
+            <li class="s-turquoise"><a href="index-color=turquoise.html" data-curtain="false"></a></li>
+            <li class="s-red"><a href="index-color=red.html" data-curtain="false"></a></li>
+            <li class="s-midnight no-margin"><a href="index-color=midnight.html" data-curtain="false"></a></li>
+            <li class="s-green"><a href="index-color=green.html" data-curtain="false"></a></li>
+            <li class="s-orange"><a href="index-color=orange.html" data-curtain="false"></a></li>
+            <li class="s-amethyst"><a href="index-color=amethyst.html" data-curtain="false"></a></li>
+            <li class="s-graphite no-margin"><a href="index-color=graphite.html" data-curtain="false"></a></li>
+        </ul>
+        <div class="clear"></div>
+</div>     
+<!-- Only for Demo Purposes -->
+
+</body>
+
+</html>
