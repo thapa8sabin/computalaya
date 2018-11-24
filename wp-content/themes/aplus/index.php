@@ -69,7 +69,7 @@
              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 	
                <figure class="animated delay030 fadeInBottom logo">
                  <a href="#index" id="show_modal">	
-          	       <img src="<?php echo get_bloginfo('template_directory'); ?>/dist/img/logo.png" alt="LorantLabor">
+          	       <img src="<?php echo get_bloginfo('template_directory'); ?>/dist/img/computalaya.png" alt="computalaya">
                  </a>	
                </figure>
              </div>
