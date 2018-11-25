@@ -39,7 +39,7 @@ if (have_posts()):?>
 
         <div class="blog-content">
 
-            <div class="parallax" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/img/bg/bg-2.jpg');">
+            <div class="parallax" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/bg/what-we-do.png');">
 
                 <div class="blog-layer padd-y-25 bg-bk-alpha">
 

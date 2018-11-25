@@ -229,7 +229,7 @@ a {
 	.bg-wh-clr-hov:hover { background-color: #fff; }
 	.bg-wh-alpha { background-color: rgba(255,255,255,0.9); }
 	
-	.bg-bk-alpha { background-color: rgba(0,0,0,0.7); }
+	.bg-bk-alpha { background-color: rgba(50, 59, 100, 0.7); }
 	
 	.gr1-clr { color: #fafafa; }
 	.gr1-clr-hov:hover { color: #fafafa; }
