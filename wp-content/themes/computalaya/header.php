@@ -21,7 +21,7 @@
 
 
 <!-- FAVICON -->
-<!-- <link rel="icon" type="<?php echo get_bloginfo('template_directory'); ?>/maya/business/image/png" href="img/favicon.png" /> -->
+<link rel="icon" type="<?php echo get_bloginfo('template_directory'); ?>/maya/business/image/png" href="img/favicon.png" />
 
 </head>
 

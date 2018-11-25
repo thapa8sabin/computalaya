@@ -5,9 +5,6 @@ wp_nav_menu(array(
 	'container_class'   => 'main-menu'
 ));
 ?>
-</nav>
-
-
 
 <div id="quick-icons">
 

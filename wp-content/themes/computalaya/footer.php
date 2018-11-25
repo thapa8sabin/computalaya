@@ -37,9 +37,8 @@
 </footer><!-- // FOOTER -->
 
 
-</div> <!-- /wrapper ->
+</div> <!-- /wrapper -->
 
-<! -- JS LIBS -->
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/js/jquery-min.js"></script>
 
 

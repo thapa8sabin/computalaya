@@ -39,11 +39,11 @@ if ( is_active_sidebar( 'sidebar-2' ) ||
 			<div class="widget-exc wh-clr">
 				<?php echo bloginfo("description"); ?></div>
 				
-				<div class="line-left brd-gr2-clr"></div>
+				<div class="line-left brd-gr2-clr">Address</div>
 
-				<div class="widget-logo"><img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/logo-white.png"></div>
-				<div class="widget-address wh-clr">Litespeed Electric, New York, NY 10001</div>
-				<div class="widget-phone wh-clr">(000) 123 456 789</div>
+				<div class="widget-logo"><?php the_custom_logo(); ?></div>
+				<div class="widget-address wh-clr">Nakhu,Laitpur, Nepal.</div>
+				<div class="widget-phone wh-clr">(+977) 986 081 0687</div>
 				
 			</div>
 			
@@ -63,23 +63,7 @@ if ( is_active_sidebar( 'sidebar-2' ) ||
 							<span class="post-title wh-clr"><a href="post-gallery.php.html">Post with Gallery</a></span>
 							<span class="post-exc wh-clr">Lorem ipsum dolo sit amet, consectetur elit dolo sit amet.</span>
 						</div>
-					</li>
-					
-					<li>
-						<div class="post-date brd-wh-clr wh-clr">22 Feb</div>
-						<div class="post-detail">
-							<span class="post-title wh-clr"><a href="post-video.php.html">Post Video Format</a></span>
-							<span class="post-exc wh-clr">Lorem ipsum dolo sit amet, consectetur elit dolo sit amet.</span>
-						</div>
-					</li>
-					
-					<li>
-						<div class="post-date brd-wh-clr wh-clr">12 Jan</div>
-						<div class="post-detail">
-							<span class="post-title wh-clr"><a href="post-audio.php.html">Post Audio Format</a></span>
-							<span class="post-exc wh-clr">Lorem ipsum dolo sit amet, consectetur elit dolo sit amet.</span>
-						</div>
-					</li>                       
+					</li>                      
 					
 				</ul>
 				
