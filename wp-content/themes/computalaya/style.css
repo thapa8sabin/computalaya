@@ -376,3 +376,15 @@ a {
 		background: #2574a9;
 		color: #fff;
 	}
+
+	@media screen and (min-width: 48em) {
+	.custom-logo-link img {
+		max-width: 300px;
+	}
+}
+
+.custom-logo-link img {
+    /* display: inline-block; */
+    max-height: 160px;
+     width: auto; 
+}

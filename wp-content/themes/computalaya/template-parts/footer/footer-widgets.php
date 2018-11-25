@@ -34,12 +34,6 @@ if ( is_active_sidebar( 'sidebar-2' ) ||
 	<div class="col-1-3">
 		
 		<div class="widget-about widget-box marg-25">
-			
-			<div class="widget-title marg-bott-25 wh-clr"><?php echo bloginfo("name"); ?></div>
-			<div class="widget-exc wh-clr">
-				<?php echo bloginfo("description"); ?></div>
-				
-				<div class="line-left brd-gr2-clr">Address</div>
 
 				<div class="widget-logo"><?php the_custom_logo(); ?></div>
 				<div class="widget-address wh-clr">Nakhu,Laitpur, Nepal.</div>
