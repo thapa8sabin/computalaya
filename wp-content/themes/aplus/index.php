@@ -69,7 +69,7 @@
              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 	
                <figure class="animated delay030 fadeInBottom logo">
                  <a href="#index" id="show_modal">	
-          	       <img src="<?php echo get_bloginfo('template_directory'); ?>/dist/img/computalaya.png" alt="computalaya">
+          	       <img src="<?php echo get_bloginfo('template_directory'); ?>/dist/img/logo.png" alt="computalaya">
                  </a>	
                </figure>
              </div>
@@ -155,17 +155,17 @@
             <div class="row">		              
               <div class="head col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1 class="col-md-offset-5 animated delay010 fadeInBottom">ABOUT US</h1>
-                <h2 class="col-md-offset-5 animated delay015 fadeInBottom">FACIMUS ITER AD POSTERUM CONSILIUM</h2> 
+                <h2 class="col-md-offset-5 animated delay015 fadeInBottom">About Computalaya Network</h2> 
               </div>	
             </div>
             <div class="row">
               <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-offset-5 animated delay020 slideInRight">
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum similique sunt in culpa qui officia deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p> 
+                <p>Computalaya Networks is an IT Consultant Company on a mission to help your business grows technologically as per requirements of your business or personal need.</p> 
               </div>
             </div>
             <div class="row">
               <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-offset-5 animated delay025 slideInLeft">
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                <p>Welcome to Computalaya Networks, a full-service Information Technology(IT) company specializing in software solutions as per your business or personal need. As personal IT professionals, we can: Help you clarify and define your goals, Recommend solutions that fit your needs, Deliver timely information, Explain how Information Technology affect you and your business.</p>
               </div>
             </div>
           </div> 
