@@ -68,6 +68,7 @@ get_template_part('template-parts/post/content','team');
 get_template_part('template-parts/post/content','partners');
 get_template_part('template-parts/post/content','testimonials');
 get_template_part('template-parts/post/content','products');
+get_template_part('template-parts/post/content','clients');
 ?>
 
 <?php get_footer(); ?>
