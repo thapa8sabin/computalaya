@@ -12,10 +12,10 @@ wp-content/computalaya/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
-dev.nepguide.com/
+dev/
 
-/.htaccess
-/license.txt
+.htaccess
+license.txt
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
