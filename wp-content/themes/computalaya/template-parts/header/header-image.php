@@ -12,7 +12,9 @@
 <div id="logo-white" class="logo">
 	<?php the_custom_logo(); ?>
 </div>
-
+<div id="logo-dark" class="logo">
+	<?php the_custom_logo(); ?>
+</div>
 <div id="logo-short" class="logo">
 	<?php the_custom_logo(); ?>
 </div>
