@@ -37,26 +37,6 @@ get_header(); ?>
 		</article>
 
 	</div>
-
-	<div class="blog-nav bg-fs-clr padd-25">
-
-		<ul>
-
-			<li class="blog-prev brd-wh-clr wh-clr bg-wh-clr-hov fs-clr-hov">
-				<a href="post-full.php.html#"><i class="icon-arrow-left"></i></a>
-			</li>
-
-			<li class="blog-home brd-wh-clr wh-clr bg-wh-clr-hov fs-clr-hov">
-				<a href="blog-page-1.php.html"><i class="icon-menu"></i></a>
-			</li>
-
-			<li class="blog-next brd-wh-clr wh-clr bg-wh-clr-hov fs-clr-hov">
-				<a href="post-full.php.html#"><i class="icon-arrow-right"></i></a>
-			</li>
-
-		</ul>
-
-	</div>
 <?php endwhile; ?>
 </div>
 

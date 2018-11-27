@@ -184,7 +184,6 @@ function twentyseventeen_setup() {
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
-					'page_blog',
 					'page_contact',
 				),
 			),
@@ -193,7 +192,6 @@ function twentyseventeen_setup() {
 			'social' => array(
 				'name' => __( 'Social Links Menu', 'twentyseventeen' ),
 				'items' => array(
-					'link_yelp',
 					'link_facebook',
 					'link_twitter',
 					'link_instagram',
@@ -340,6 +338,18 @@ function twentyseventeen_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'			=> __('Connect widget','twentyseventeen'),
+		'id'			=> 'computalya-connect-widget',
+		'description'	=> __('Contents to show on home page','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+	
 }
 add_action( 'widgets_init', 'twentyseventeen_widgets_init' );
 
@@ -558,6 +568,8 @@ function twentyseventeen_widget_tag_cloud_args( $args ) {
 
 	return $args;
 }
+
+
 add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
 /**

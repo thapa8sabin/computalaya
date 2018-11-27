@@ -1,25 +1,26 @@
-<?php
+<?php 
 get_header(); ?>
+<?php while(have_posts()): the_post();?>
+	<div id="<?php the_title() ?>" class="page">
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div id="post-image" class="row" style="background-image: url('<?php the_post_thumbnail_url() ?>');">
 
-			<?php
-			while ( have_posts() ) : the_post();
+			<div class="header-page padd-y-75">
 
-				get_template_part( 'template-parts/page/content', 'page' );
+				<div class="header-section padd-y-75 bg-gr1-clr">
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+					<div class="title-section padd-x-25 fs-clr"><?php the_title(); ?></div>
+					<div class="subtitle-section padd-x-25"><?php the_excerpt(); ?></div>
 
-			endwhile; // End of the loop.
-			?>
+				</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+			</div>
+
+		</div>
+		
+		<?php the_content(); ?>
+
+	</div>
+<?php endwhile; ?>
 
 <?php get_footer();
