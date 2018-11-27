@@ -8,6 +8,7 @@ wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
 computalaya/wp-content/uploads/
+wp-content/computalaya/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php

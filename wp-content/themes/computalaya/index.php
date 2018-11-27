@@ -65,50 +65,8 @@ if (have_posts()):?>
 
 <?php
 get_template_part('template-parts/post/content','team');
+get_template_part('template-parts/post/content','partners');
+get_template_part('template-parts/post/content','testimonials');
 ?>
 
-
-<div id="clients" class="section">
-
-    <div class="clients-content padd-y-50 bg-fs-clr">
-
-        <div class="boxed">
-
-            <ul class="client-list" id="clients-carousel">
-
-                <li class="client-thumb marg-25 transit-top" data-delay="0">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/clients/client1.png">
-                </li>
-                
-                <li class="client-thumb marg-25 transit-top" data-delay="200">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/clients/client2.png">
-                </li>
-                
-                <li class="client-thumb marg-25 transit-top" data-delay="400">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/clients/client3.png">
-                </li>
-                
-                <li class="client-thumb marg-25 transit-top" data-delay="600">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/clients/client4.png">
-                </li>
-                
-                <li class="client-thumb marg-25 transit-top" data-delay="800">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/clients/client5.png">
-                </li>
-                
-                <li class="client-thumb marg-25 transit-top" data-delay="900">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/clients/client1.png">
-                </li>
-                
-                <li class="client-thumb marg-25">
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/clients/client2.png">
-                </li>
-                
-            </ul>
-            
-        </div> 
-
-    </div>
-    
-</div><!-- // CLIENTS -->
 <?php get_footer(); ?>
