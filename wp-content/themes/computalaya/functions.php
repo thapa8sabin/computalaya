@@ -321,7 +321,7 @@ function twentyseventeen_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Footer 1', 'twentyseventeen' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'footer-1',
 		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -331,7 +331,7 @@ function twentyseventeen_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Footer 2', 'twentyseventeen' ),
-		'id'            => 'sidebar-3',
+		'id'            => 'footer-2',
 		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -343,6 +343,17 @@ function twentyseventeen_widgets_init() {
 		'name'			=> __('Connect widget','twentyseventeen'),
 		'id'			=> 'computalya-connect-widget',
 		'description'	=> __('Contents to show on home page','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+
+	register_sidebar( array(
+		'name'			=> __('Footer 3','twentyseventeen'),
+		'id'			=> 'footer-3',
+		'description'	=> __('Quick Contact to show on home page','twentyseventeen'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'	=> '</section>',
 		'before_title'  => '<h2 class="widget-title">',

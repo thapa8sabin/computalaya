@@ -10,7 +10,6 @@ wp_nav_menu(array(
 
 	<ul class="info-menu">
 		<li><a title="support" href="mailto:info@computalaya.com"><i class="icon-mail"></i></a></li>
-		<li><a title="follow us" href="http://www.computalaya.com"><i class="icon-heart"></i></a></li>
 	</ul>
 
 	<ul class="switch-menu">
