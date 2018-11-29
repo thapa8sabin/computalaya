@@ -7,7 +7,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php endif; ?>
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -16,6 +16,9 @@
 
 <link href="<?php echo get_bloginfo('template_directory'); ?>/maya/business/css/style.css" rel="stylesheet" type="text/css">
 <link href="<?php echo get_bloginfo('template_directory'); ?>/maya/business/css/plugins.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/maya/business/css/navbar.css"> <!-- Resource style -->
+<script src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/js/modernizr.js"></script> <!-- Modernizr -->
 
 <?php wp_head(); ?>
 
@@ -26,24 +29,33 @@
 </head>
 
 <body> 
-   
+
     <div id="wrap">
-        
-        <header class="transit header-clear">
-            <?php get_template_part( 'template-parts/header/header', 'image' );?>
-            <?php if(has_nav_menu('top')): ?>
-                <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-            <?php endif; ?>
+
+        <header>
+            <?php 
+             //get_template_part( 'template-parts/header/header', 'image' );
             
+            ?>
+            <?php //if(has_nav_menu('top')): ?>
+            <?php //get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+            <?php //endif; ?>
+            
+            <nav class="cd-stretchy-nav">
+                <a class="cd-nav-trigger" href="#">
+                    <span aria-hidden="true"></span>
+                </a>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location'    => 'top',
+                    'container'         => false,
+                    'before'            => '<span>',
+                    'after'             => '</span>',
+                    'walker'            => new Computalaya_Walker
+                ));
+                 ?>
+
+                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+            </nav>
         </header>
-        <?php
-        // mobile menu
-                    wp_nav_menu(array(
-                        'theme_location' => 'top',
-                        'container'     => 'div',
-                        'container_id'   => 'mobile-menu',
-                        'container_class'   => '',
-                        'walker'            => new Computalaya_Walker()
-                    ));
-                ?>
 <!-- // MENU / LOGO -->

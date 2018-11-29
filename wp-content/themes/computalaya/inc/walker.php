@@ -13,9 +13,10 @@ class Computalaya_Walker extends Walker {
      * Note: Menu objects include url and title properties, so we will use those.
      */
     function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-        $output .= sprintf( "\n<li><a href='%s'>%s</a></li>\n",
-            $item->url,
+        $output .= sprintf( "\n<li data-scrollto='%s' %s><a href='%s'><span>%s</span></a></li>\n",
+            '#'.strtolower($item->title),
             ( $item->object_id === get_the_ID() ) ? ' class="current"' : '',
+            $item->url,
             $item->title
         );
     }

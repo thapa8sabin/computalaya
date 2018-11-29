@@ -1,10 +1,10 @@
 <?php
-wp_nav_menu(array(
+/*wp_nav_menu(array(
 	'theme_location' => 'top',
 	'container'     => 'div',
 	'container_class'   => 'main-menu'
 ));
-?>
+
 
 <div id="quick-icons">
 
@@ -22,3 +22,5 @@ wp_nav_menu(array(
 </div>
 
 <div class="clear"></div>
+*/
+?>

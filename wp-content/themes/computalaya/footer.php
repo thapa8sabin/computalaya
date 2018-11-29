@@ -40,12 +40,11 @@
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/js/plugins.js"></script> 
 
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/js/scripts.js"></script> 
+
+<script src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/js/main.js"></script> <!-- Resource jQuery -->
+
 <script type="text/javascript">
-	jQuery(function(){
-		jQuery(window).load(function() {
-			jQuery('body').css('background','#ccc');
-		});
-	});
+	
 </script>
 <?php wp_footer(); ?>
 </body>
