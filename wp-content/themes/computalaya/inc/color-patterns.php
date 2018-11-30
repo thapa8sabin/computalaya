@@ -25,7 +25,7 @@ function twentyseventeen_custom_colors_css() {
 	$saturation = $saturation . '%';
 	$css = '
 /**
- * Twenty Seventeen: Color Patterns
+ * Computalaya Networks: Color Patterns
  *
  * Colors are ordered from dark to light.
  */
@@ -147,6 +147,9 @@ function twentyseventeen_custom_colors_css() {
 .colors-custom .post-navigation a:focus .icon,
 .colors-custom .post-navigation a:hover .icon,
 .colors-custom .site-content .site-content-light,
+/*Computalaya Maya Custom*/
+.overw-title,.overw-exc,.footer-copy,.widget-title,.widget-address,.widget-phone,.wpcf7-form-control,.wpcf7-form,.quote-message,.quote-exc,.quote-author,.owl-theme .owl-controls .owl-page span,
+
 .colors-custom .twentyseventeen-panel .recent-posts .entry-header .edit-link {
 	color: hsl( ' . $hue . ', ' . $saturation . ', 13% ); /* base: #222; */
 }

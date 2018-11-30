@@ -41,31 +41,6 @@ header, nav, section, article, footer {
     display: block;
 }
 
-/* INPUT */
-
-input, textarea {
-	border-radius: 0;
-	border: none;
-	outline: none;
-	
-	appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
-	-o-appearance: none;
-	-webkit-appearance: none;
-	
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	
-	width: 100%;
-	
-    font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	font-weight: 300;
-}
 
 /* TYPOGRAPHY */
 
@@ -1351,9 +1326,9 @@ header.sticky:hover {
 	line-height: 50px;
 	text-align: center;
 	font-weight: 500;
-	text-transform: uppercase;
 	border-style: solid;
 	border-width: 3px;
+	font-size: 14px;
 }
 
 .team-role {
@@ -1486,7 +1461,7 @@ header.sticky:hover {
 		padding: 0 25px;
 		border-style: solid;
 		border-width: 2px;
-		background-color: #fff;
+
 	}
 	
 	textarea {
@@ -1494,7 +1469,6 @@ header.sticky:hover {
 		clear: both;
 		padding: 25px;
 		margin-bottom: 10px;
-		background-color: #fff;
 		border-style: solid;
 		border-width: 2px;
 	}
@@ -1505,7 +1479,6 @@ header.sticky:hover {
 		clear: both; 
 		border-style: solid;
 		border-width: 2px;
-		color: #fff;
 		cursor: pointer;
 	}
 
@@ -1653,7 +1626,6 @@ aside {
 	line-height: 36px;
 	text-transform: uppercase;
 	text-align: center;	
-	color: #fff;
 }
 
 /* POST - PAGE */

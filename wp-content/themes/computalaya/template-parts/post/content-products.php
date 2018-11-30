@@ -5,12 +5,7 @@
  if ( count( $products ) > 0 ) : ?>
  <div id="products" class="overw-content">
     
-    <div class="parallax" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/bg/blog.jpg');">	
-        <div class="header-section padd-y-75 bg-fs-clr">
-            
-            <div class="title-section padd-x-25 wh-clr"><?php echo $products_meta->label; ?></div>
-            
-        </div>
+    <div class="parallax" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/bg/blog.jpg');">
         
         <div class="overw-list padd-y-75 bg-fs-alpha">
          

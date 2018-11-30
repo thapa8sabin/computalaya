@@ -12,14 +12,6 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
-<!-- CSS LIBS -->
-
-<link href="<?php echo get_bloginfo('template_directory'); ?>/maya/business/css/style.css" rel="stylesheet" type="text/css">
-<link href="<?php echo get_bloginfo('template_directory'); ?>/maya/business/css/plugins.css" rel="stylesheet" type="text/css">
-
-<link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/maya/business/css/navbar.css"> <!-- Resource style -->
-<script src="<?php echo get_bloginfo('template_directory'); ?>/maya/business/js/modernizr.js"></script> <!-- Modernizr -->
-
 <?php wp_head(); ?>
 
 
@@ -28,11 +20,34 @@
 
 </head>
 
-<body> 
+<body <?php body_class(); ?>> 
 
     <div id="wrap">
 
         <header>
+            
+            <nav class="cd-stretchy-nav">
+                <a class="cd-nav-trigger" href="#">
+                    <span aria-hidden="true"></span>
+                </a>
+                <?php
+                if ( is_home() ) {
+                    wp_nav_menu(array(
+                        'theme_location'    => 'top',
+                        'container'         => false,
+                        'before'            => '<span>',
+                        'after'             => '</span>',
+                        'walker'            => new Computalaya_Walker
+                    ));    
+                } else { ?>
+                    <ul>
+                        <li><a href="<?php echo get_home_url() ?>"><span>Home</span></li>
+                    </ul>
+                <?php } ?>
+
+                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+            </nav>
+            
             <?php 
              //get_template_part( 'template-parts/header/header', 'image' );
             
@@ -41,21 +56,5 @@
             <?php //get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
             <?php //endif; ?>
             
-            <nav class="cd-stretchy-nav">
-                <a class="cd-nav-trigger" href="#">
-                    <span aria-hidden="true"></span>
-                </a>
-                <?php
-                wp_nav_menu(array(
-                    'theme_location'    => 'top',
-                    'container'         => false,
-                    'before'            => '<span>',
-                    'after'             => '</span>',
-                    'walker'            => new Computalaya_Walker
-                ));
-                 ?>
-
-                <span aria-hidden="true" class="stretchy-nav-bg"></span>
-            </nav>
         </header>
 <!-- // MENU / LOGO -->

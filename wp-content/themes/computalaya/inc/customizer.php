@@ -45,8 +45,8 @@ function twentyseventeen_customize_register( $wp_customize ) {
 		'type'    => 'radio',
 		'label'    => __( 'Color Scheme', 'twentyseventeen' ),
 		'choices'  => array(
-			'light'  => __( 'Light', 'twentyseventeen' ),
-			'dark'   => __( 'Dark', 'twentyseventeen' ),
+			//'light'  => __( 'Light', 'twentyseventeen' ),
+			//'dark'   => __( 'Dark', 'twentyseventeen' ),
 			'custom' => __( 'Custom', 'twentyseventeen' ),
 		),
 		'section'  => 'colors',

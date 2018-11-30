@@ -1,7 +1,6 @@
-<?php 
-get_header(); ?>
+<?php get_header(); ?>
 <?php while(have_posts()): the_post();?>
-	<div id="<?php the_title() ?>" class="page">
+	<div id="<?php the_title() ?>" class="section">
 
 		<div id="post-image" class="row" style="background-image: url('<?php the_post_thumbnail_url() ?>');">
 
@@ -10,7 +9,6 @@ get_header(); ?>
 				<div class="header-section padd-y-75 bg-gr1-clr">
 
 					<div class="title-section padd-x-25 fs-clr"><?php the_title(); ?></div>
-					<div class="subtitle-section padd-x-25"><?php the_excerpt(); ?></div>
 
 				</div>
 
@@ -23,4 +21,4 @@ get_header(); ?>
 	</div>
 <?php endwhile; ?>
 
-<?php get_footer();
+<?php get_footer(); ?>

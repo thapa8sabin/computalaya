@@ -320,7 +320,7 @@ function twentyseventeen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'twentyseventeen' ),
+		'name'          => __( 'Careers', 'twentyseventeen' ),
 		'id'            => 'footer-1',
 		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -330,7 +330,7 @@ function twentyseventeen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'twentyseventeen' ),
+		'name'          => __( 'Google Maps', 'twentyseventeen' ),
 		'id'            => 'footer-2',
 		'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -351,8 +351,69 @@ function twentyseventeen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'			=> __('Footer 3','twentyseventeen'),
+		'name'			=> __('Contact Form Widget','twentyseventeen'),
 		'id'			=> 'footer-3',
+		'description'	=> __('Quick Contact to show on home page','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+	register_sidebar( array(
+		'name'			=> __('Who We Are','twentyseventeen'),
+		'id'			=> 'content',
+		'description'	=> __('Post Contents','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+
+	register_sidebar( array(
+		'name'			=> __('Team','twentyseventeen'),
+		'id'			=> 'team',
+		'description'	=> __('Home Widget','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+	register_sidebar( array(
+		'name'			=> __('Partners','twentyseventeen'),
+		'id'			=> 'partners',
+		'description'	=> __('Quick Contact to show on home page','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+	register_sidebar( array(
+		'name'			=> __('Testimonials','twentyseventeen'),
+		'id'			=> 'testimonials',
+		'description'	=> __('Quick Contact to show on home page','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+	register_sidebar( array(
+		'name'			=> __('Products','twentyseventeen'),
+		'id'			=> 'products',
+		'description'	=> __('Quick Contact to show on home page','twentyseventeen'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+
+	) );
+	register_sidebar( array(
+		'name'			=> __('Clients','twentyseventeen'),
+		'id'			=> 'clients',
 		'description'	=> __('Quick Contact to show on home page','twentyseventeen'),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'	=> '</section>',
@@ -431,9 +492,13 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
  */
 function twentyseventeen_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-  	wp_enqueue_style( 'core', get_template_directory_uri() . '/assets/style.css' );
+  	// wp_enqueue_style( 'core', get_template_directory_uri() . '/assets/style.css' );
+  	wp_enqueue_style( 'style', get_template_directory_uri() . '/maya/business/css/style.css' );
+  	wp_enqueue_style( 'plugins', get_template_directory_uri() . '/maya/business/css/plugins.css' );
+  	wp_enqueue_style( 'navbar', get_template_directory_uri() . '/maya/business/css/navbar.css' );
 
   	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array( 'jquery' ) );
+  	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/maya/business/js/modernizr.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 

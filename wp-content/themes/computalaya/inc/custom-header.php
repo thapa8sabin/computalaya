@@ -74,7 +74,7 @@ function twentyseventeen_header_style() {
 		// Has the text been hidden?
 		if ( 'blank' === $header_text_color ) :
 	?>
-		.site-title,
+		.site-title,section
 		.site-description {
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
@@ -83,25 +83,8 @@ function twentyseventeen_header_style() {
 		// If the user has set a custom color for the text use that.
 		else :
 	?>
-		.site-title a,
-		.colors-dark .site-title a,
-		.colors-custom .site-title a,
-		body.has-header-image .site-title a,
-		body.has-header-video .site-title a,
-		body.has-header-image.colors-dark .site-title a,
-		body.has-header-video.colors-dark .site-title a,
-		body.has-header-image.colors-custom .site-title a,
-		body.has-header-video.colors-custom .site-title a,
-		.site-description,
-		.colors-dark .site-description,
-		.colors-custom .site-description,
-		body.has-header-image .site-description,
-		body.has-header-video .site-description,
-		body.has-header-image.colors-dark .site-description,
-		body.has-header-video.colors-dark .site-description,
-		body.has-header-image.colors-custom .site-description,
-		body.has-header-video.colors-custom .site-description {
-			color: #<?php echo esc_attr( $header_text_color ); ?>;
+		.section,.cd-stretchy-nav .stretchy-nav-bg {
+			background-color: #<?php echo esc_attr( $header_text_color ); ?> !important;
 		}
 	<?php endif; ?>
 	</style>
