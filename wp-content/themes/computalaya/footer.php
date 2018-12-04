@@ -1,3 +1,16 @@
+<div id="icons-menu" class="transit-top" data-delay="1500" data-appear="false">
+  <ul>
+    <?php
+      @wp_nav_menu(array(
+        'theme_location'  => 'useful_links',
+        'menu_class'      => false,
+        'container_class' => false,
+        'depth'           => 1,
+        'walker'          => new Computalaya_Useful_Link
+      )); 
+    ?>
+  </ul>        
+</div>
 
 <footer>
 
@@ -47,5 +60,11 @@
 	
 </script>
 <?php wp_footer(); ?>
+
 </body>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("[rel='tooltip']").tooltip();
+    });
+</script>
 </html>

@@ -39,6 +39,7 @@ Stretchy Nav style - common to:
   position: fixed;
   z-index: 2;
   pointer-events: none;
+  margin-top: 20px;
 }
 .cd-stretchy-nav .stretchy-nav-bg {
   /* this is the stretching navigation background */

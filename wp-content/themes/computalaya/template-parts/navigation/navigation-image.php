@@ -1,5 +1,5 @@
 <?php if(has_header_image()): ?>
-    <div id="intro" class="section">
+    <div id="intro" class="section is_active">
         <div class="parallax dotted" style="background-image: url('<?php echo get_header_image() ?>')">
             
         </div>
@@ -9,5 +9,8 @@
             <?php endif; ?>
         </div>
 
+        
+
     </div><!-- // INTRO -->
 <?php endif; ?>
+

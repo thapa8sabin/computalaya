@@ -7,11 +7,11 @@ if (is_active_sidebar('content')) {
 }
 
 if (is_active_sidebar('team')) {
-	get_template_part('template-parts/post/content','team');	
+	get_template_part('template-parts/post/content','team');
 }
 
 if (is_active_sidebar('partners')) {
-	get_template_part('template-parts/post/content','partners');	
+	get_template_part('template-parts/post/content','partners');
 }
 
 if (is_active_sidebar('testimonials')) {

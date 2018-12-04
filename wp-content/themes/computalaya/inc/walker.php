@@ -13,7 +13,7 @@ class Computalaya_Walker extends Walker {
      * Note: Menu objects include url and title properties, so we will use those.
      */
     function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-        $output .= sprintf( "\n<li data-scrollto='%s' %s><a href='%s'><span>%s</span></a></li>\n",
+        $output .= sprintf( "\n<li class='nav-item' data-scrollto='%s' %s><a class='nav-link' href='%s'>%s</a></li>\n",
             '#'.strtolower($item->title),
             ( $item->object_id === get_the_ID() ) ? ' class="current"' : '',
             $item->url,
@@ -30,3 +30,22 @@ class Social_Link_Walker extends Walker {
         $output .= "</i></a></li>";
     }    
 }
+
+
+class Computalaya_Useful_Link extends Walker {
+    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+        $thing = explode('-', $item->url);
+
+        // print_r($thing);
+        // echo str_replace('http://', '', $thing[0]);
+
+        $output .= sprintf( "\n<li class='%s' data-title='%s'><i class='%s'></i></li>\n",
+            'on_change_page',
+            str_replace('http://', '#', $thing[0]),
+            'icon-'.$thing[1]
+            // ( $item->object_id === get_the_ID() ) ? ' class="current"' : ''
+            // '#'.strtolower($item->title)
+        );
+    }
+}
+

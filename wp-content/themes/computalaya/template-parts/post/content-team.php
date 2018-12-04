@@ -4,7 +4,7 @@ $team_metal = get_post_type_object('teams');
 if ( count( $teams ) > 0  ) : 
 ?>
     
-<div id="team" class="section">
+<div id="team" class="section-team" style="display: none">
     
     <div class="header-section padd-y-75">
         

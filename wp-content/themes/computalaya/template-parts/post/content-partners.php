@@ -2,7 +2,7 @@
 $links = get_bookmarks(['category_name' => 'Industrial Partners']); 
 // print_r($links);die;
 ?>
-<div id="clients" class="section">
+<div id="partners" class="section-clients" style="display: none;">
 
     <div class="clients-content padd-y-50 bg-fs-clr">
 

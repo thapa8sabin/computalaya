@@ -25,36 +25,6 @@
     <div id="wrap">
 
         <header>
-            
-            <nav class="cd-stretchy-nav">
-                <a class="cd-nav-trigger" href="#">
-                    <span aria-hidden="true"></span>
-                </a>
-                <?php
-                if ( is_home() ) {
-                    wp_nav_menu(array(
-                        'theme_location'    => 'top',
-                        'container'         => false,
-                        'before'            => '<span>',
-                        'after'             => '</span>',
-                        'walker'            => new Computalaya_Walker
-                    ));    
-                } else { ?>
-                    <ul>
-                        <li><a href="<?php echo get_home_url() ?>"><span>Home</span></li>
-                    </ul>
-                <?php } ?>
-
-                <span aria-hidden="true" class="stretchy-nav-bg"></span>
-            </nav>
-            
-            <?php 
-             //get_template_part( 'template-parts/header/header', 'image' );
-            
-            ?>
-            <?php //if(has_nav_menu('top')): ?>
-            <?php //get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-            <?php //endif; ?>
-            
+            <?php if (is_home()) { get_template_part('template-parts/navigation/navigation','top'); } ?>
         </header>
 <!-- // MENU / LOGO -->

@@ -1,19 +1,39 @@
 jQuery(document).ready(function($){
-	if( $('.cd-stretchy-nav').length > 0 ) {
-		var stretchyNavs = $('.cd-stretchy-nav');
-		
-		stretchyNavs.each(function(){
-			var stretchyNav = $(this),
-				stretchyNavTrigger = stretchyNav.find('.cd-nav-trigger');
-			
-			stretchyNavTrigger.on('click', function(event){
-				event.preventDefault();
-				stretchyNav.toggleClass('nav-is-visible');
-			});
-		});
+	/*if( $('#navbarNav').length > 0 ) {
 
-		$(document).on('click', function(event){
-			( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible');
+		var  icons = {
+			'About':'bell',
+			'Products':'box',
+			'Careers':'star',
+			'Team':'head',
+			},
+		menus = $('#navbarNav').find('ul').children().each(function(){
+			
+			// Add menu on the bottom as same
+			var menu_title = $(this).text();
+			// console.log(menu_title) ;
+			new_li = '<li rel="tooltip" data-title="'+menu_title+'"><i class="icon-'+ icons[menu_title] +'"></i></li>';
+			// console.log(new_li);
+			$('#icons-menu').find('ul').prepend(new_li);
 		});
-	}
+	}*/
+
+	$('li.nav-item').find('a').on('click',function(e){
+		// $('div.is_active').removeClass('is_active');
+		e.preventDefault();
+		var id = $(this).attr('href');
+		$('div.is_active').fadeOut();
+		$(id).addClass('is_active').fadeIn();
+	});
+
+	$('li.on_change_page').on('click',function(e){
+		var id = $(this).attr('data-title');
+		$('div.is_active').fadeOut();
+		$(id).addClass('is_active').fadeIn();
+	});
 });
+
+
+
+
+

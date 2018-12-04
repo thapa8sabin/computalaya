@@ -3,7 +3,7 @@ $testimonials_meta = get_post_type_object('testimonials');
 $testimonials = get_posts(['post_type'=>'testimonials']);
 
 if (count($testimonials) > 0): ?>
-<div id="quotes" class="section">
+<div id="testimonials" class="section-quotes" style="display: none;">
 
     <div class="quote-content">
         

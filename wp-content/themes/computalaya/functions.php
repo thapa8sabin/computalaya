@@ -62,6 +62,7 @@ function twentyseventeen_setup() {
 	register_nav_menus( array(
 		'top'    => __( 'Top Menu', 'twentyseventeen' ),
 		'social' => __( 'Social Links Menu', 'twentyseventeen' ),
+		'useful_links' => __( 'Useful Links', 'twentyseventeen' ),
 	) );
 
 	/*
@@ -110,7 +111,7 @@ function twentyseventeen_setup() {
 	$starter_content = array(
 		'widgets' => array(
 			// Place three core-defined widgets in the sidebar area.
-			'sidebar-1' => array(
+			'navigation-bar' => array(
 				'text_business_info',
 				'search',
 				'text_about',
@@ -197,7 +198,7 @@ function twentyseventeen_setup() {
 					'link_instagram',
 					'link_email',
 				),
-			),
+			)
 		),
 	);
 
@@ -238,7 +239,7 @@ function twentyseventeen_content_width() {
 	}
 
 	// Check if is single post and there is no sidebar.
-	if ( is_single() && ! is_active_sidebar( 'sidebar-1' ) ) {
+	if ( is_single() && ! is_active_sidebar( 'navigation-bar' ) ) {
 		$content_width = 740;
 	}
 
@@ -310,8 +311,8 @@ function twentyseventeen_resource_hints( $urls, $relation_type ) {
  */
 function twentyseventeen_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Blog Sidebar', 'twentyseventeen' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Navigation Bar', 'twentyseventeen' ),
+		'id'            => 'navigation-bar',
 		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -492,13 +493,10 @@ add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
  */
 function twentyseventeen_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-  	// wp_enqueue_style( 'core', get_template_directory_uri() . '/assets/style.css' );
+  	wp_enqueue_style( 'core', get_template_directory_uri() . '/style.css' );
   	wp_enqueue_style( 'style', get_template_directory_uri() . '/maya/business/css/style.css' );
   	wp_enqueue_style( 'plugins', get_template_directory_uri() . '/maya/business/css/plugins.css' );
-  	wp_enqueue_style( 'navbar', get_template_directory_uri() . '/maya/business/css/navbar.css' );
-
   	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array( 'jquery' ) );
-  	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/maya/business/js/modernizr.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'twentyseventeen_scripts' );
 
@@ -520,7 +518,7 @@ function twentyseventeen_content_image_sizes_attr( $sizes, $size ) {
 		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
 	}
 
-	if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
+	if ( is_active_sidebar( 'navigation-bar' ) || is_archive() || is_search() || is_home() || is_page() ) {
 		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
 			 $sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
 		}
@@ -583,6 +581,31 @@ function twentyseventeen_front_page_template( $template ) {
 	return is_home() ? '' : $template;
 }
 add_filter( 'frontpage_template',  'twentyseventeen_front_page_template' );
+
+function change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'Articles';
+    $submenu['edit.php'][5][0] = 'Articles';
+    $submenu['edit.php'][10][0] = 'Add Articles';
+    echo '';
+}
+function change_post_object_label() {
+        global $wp_post_types;
+        $labels = &$wp_post_types['post']->labels;
+        $labels->name = 'Articles';
+        $labels->singular_name = 'Article';
+        $labels->add_new = 'Add Article';
+        $labels->add_new_item = 'Add Article';
+        $labels->edit_item = 'Edit Article';
+        $labels->new_item = 'Article';
+        $labels->view_item = 'View Article';
+        $labels->search_items = 'Search Articles';
+        $labels->not_found = 'No Articles found';
+        $labels->not_found_in_trash = 'No Articles found in Trash';
+}
+add_action( 'init', 'change_post_object_label' );
+add_action( 'admin_menu', 'change_post_menu_label' );
 
 /**
  * Modifies tag cloud widget arguments to display all tags in the same font size

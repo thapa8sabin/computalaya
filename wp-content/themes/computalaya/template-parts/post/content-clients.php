@@ -1,4 +1,4 @@
-<div id="widgets" class="section">
+<div id="clients" class="section-widgets" style="display: none">
 
     <div class="widget-content padd-y-50 bg-nd-clr">
     

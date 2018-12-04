@@ -1,7 +1,7 @@
 <?php 
 if (have_posts()):?>
 
-    <div id="blog" class="section">
+    <div id="services" class="section-blog" style="display: none;">
 
         <div class="blog-content">
 

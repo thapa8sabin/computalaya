@@ -3,7 +3,7 @@
 
  $products_meta = get_post_type_object('computalaya_products');
  if ( count( $products ) > 0 ) : ?>
- <div id="products" class="overw-content">
+ <div id="products" class="overw-content" style="display: none;">
     
     <div class="parallax" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/maya/business/img/bg/blog.jpg');">
         

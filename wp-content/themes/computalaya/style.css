@@ -47,6 +47,25 @@ a {
 	text-decoration: none;
 }
 
+.custom-logo-link{
+
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+
+}
+
+.custom-logo {
+
+	width: 100%;
+    height: 20px;
+
+}
+
 .urban {
 	width: 100%;
 	height: auto;
@@ -383,6 +402,19 @@ a {
 	}
 }
 
+
+
+.custom-logo-link{
+
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+
+}
 .custom-logo-link img {
     /* display: inline-block; */
     max-height: 160px;
